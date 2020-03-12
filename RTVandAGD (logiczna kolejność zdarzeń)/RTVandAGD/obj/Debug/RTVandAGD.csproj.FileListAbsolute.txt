@@ -1,0 +1,7 @@
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\bin\Debug\RTVandAGD.exe.config
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\bin\Debug\RTVandAGD.exe
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\bin\Debug\RTVandAGD.pdb
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\obj\Debug\RTVandAGD.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\obj\Debug\RTVandAGD.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\obj\Debug\RTVandAGD.exe
+C:\Users\Mateusz\source\repos\RTVandAGD\RTVandAGD\obj\Debug\RTVandAGD.pdb
