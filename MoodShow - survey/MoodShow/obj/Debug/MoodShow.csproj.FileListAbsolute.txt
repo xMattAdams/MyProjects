@@ -1,0 +1,12 @@
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\bin\Debug\MoodShow.exe.config
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\bin\Debug\MoodShow.exe
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\bin\Debug\MoodShow.pdb
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.Form1.resources
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.Properties.Resources.resources
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.csproj.GenerateResource.cache
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.exe
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.pdb
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.Form2.resources
+C:\Users\Mateusz\source\repos\MoodShow\MoodShow\obj\Debug\MoodShow.Form3.resources
