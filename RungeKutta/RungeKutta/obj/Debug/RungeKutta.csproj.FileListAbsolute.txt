@@ -1,0 +1,7 @@
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\bin\Debug\RungeKutta.exe.config
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\bin\Debug\RungeKutta.exe
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\bin\Debug\RungeKutta.pdb
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\obj\Debug\RungeKutta.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\obj\Debug\RungeKutta.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\obj\Debug\RungeKutta.exe
+C:\Users\Mateusz\source\repos\RungeKutta\RungeKutta\obj\Debug\RungeKutta.pdb
