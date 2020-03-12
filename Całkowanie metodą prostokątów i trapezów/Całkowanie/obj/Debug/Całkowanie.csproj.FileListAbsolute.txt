@@ -1,0 +1,7 @@
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\bin\Debug\Całkowanie.exe.config
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\bin\Debug\Całkowanie.exe
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\bin\Debug\Całkowanie.pdb
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\obj\Debug\Całkowanie.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\obj\Debug\Całkowanie.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\obj\Debug\Całkowanie.exe
+C:\Users\Mateusz\source\repos\Całkowanie\Całkowanie\obj\Debug\Całkowanie.pdb
