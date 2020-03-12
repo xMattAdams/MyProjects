@@ -1,0 +1,10 @@
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\bin\Debug\Alien Invasion.exe.config
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\bin\Debug\Alien Invasion.exe
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\bin\Debug\Alien Invasion.pdb
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien Invasion.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien_Invasion.Form1.resources
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien_Invasion.Properties.Resources.resources
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien Invasion.csproj.GenerateResource.Cache
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien Invasion.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien Invasion.exe
+C:\Users\Mateusz\source\repos\Alien Invasion\Alien Invasion\obj\Debug\Alien Invasion.pdb
