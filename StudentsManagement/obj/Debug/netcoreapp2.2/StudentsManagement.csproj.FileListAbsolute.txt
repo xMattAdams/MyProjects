@@ -1,0 +1,16 @@
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.deps.json
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.runtimeconfig.json
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.runtimeconfig.dev.json
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.dll
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.pdb
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.csprojAssemblyReference.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorAssemblyInfo.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorAssemblyInfo.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.AssemblyInfoInputs.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.AssemblyInfo.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorTargetAssemblyInfo.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.dll
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.pdb
