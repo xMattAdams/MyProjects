@@ -14,3 +14,12 @@ C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsM
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorTargetAssemblyInfo.cache
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.dll
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.pdb
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.Views.dll
+C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\StudentsManagement.Views.pdb
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.TagHelpers.input.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.TagHelpers.output.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorCoreGenerate.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorTargetAssemblyInfo.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.Views.pdb
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.csproj.CopyComplete

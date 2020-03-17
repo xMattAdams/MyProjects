@@ -1,0 +1,23 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewData["PageTitle"]</h3>
+    @{ 
+        var student = ViewData["Student"] as StudentsManagement.Models.Student;
+    }
+
+    <div>
+        Name: @student.Name 
+    </div>
+    
+    <div>
+        Surname: @student.Surname
+    </div>
+
+    <div>
+        Class: @student.Class
+    </div>
+</body>
+</html>
