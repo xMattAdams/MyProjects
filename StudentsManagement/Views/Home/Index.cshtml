@@ -1,0 +1,30 @@
+﻿@model IEnumerable<StudentsManagement.Models.Student>
+
+@{ 
+    
+    ViewBag.Title = "Student List";
+}    
+        
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>               
+                <th>Name</th>               
+                <th>Surname</th>             
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody>
+         @foreach (var student in Model)
+         {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Surname</td>
+                <td>@student.Class</td>
+
+            </tr>
+         }
+        </tbody>
+    </table>
+    

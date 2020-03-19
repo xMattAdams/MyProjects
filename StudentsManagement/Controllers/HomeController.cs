@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StudentsManagement.Models;
+using StudentsManagement.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,17 +18,21 @@ namespace StudentsManagement.Controllers
         }
         
         
-        public string Index()
+        public ViewResult Index()
         {
-           return _studentRepository.GetStudent(1).Name;
+            var model= _studentRepository.GetAllStudents();
+            return View(model);
         }
 
         public ViewResult Details()
         {
-            Student model = _studentRepository.GetStudent(1);
-            ViewData["Student"] = model;
-            ViewData["PageTitle"] = "Student Details";
-            return View(model);
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Student = _studentRepository.GetStudent(1),
+                PageTitle = "Student Details"
+            };
+            
+            return View(homeDetailsViewModel);
         }
 
 

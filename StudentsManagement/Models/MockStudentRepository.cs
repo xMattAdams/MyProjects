@@ -20,7 +20,12 @@ namespace StudentsManagement.Models
                 new Student() {Id =5, Name="Wojciech", Surname="Mann", Class="1A"}
             };
         }
-        
+
+        public IEnumerable<Student> GetAllStudents()
+        {
+            return _studentList;
+        }
+
         public Student GetStudent(int Id)
         {
             return _studentList.FirstOrDefault(e => e.Id == Id);

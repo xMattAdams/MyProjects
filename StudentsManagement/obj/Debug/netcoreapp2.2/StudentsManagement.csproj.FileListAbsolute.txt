@@ -23,3 +23,6 @@ C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Vie
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.RazorTargetAssemblyInfo.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.Views.pdb
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.csproj.CopyComplete
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
