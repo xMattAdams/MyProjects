@@ -5,22 +5,29 @@
     ViewBag.Title = "Student Details";
 }
 
-<h3>@Model.PageTitle</h3>
-@{
-    var student = ViewData["Student"] as StudentsManagement.Models.Student;
-}
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@Model.Student.Name</h1>
+                </div>
 
-<div>
-    Name: @Model.Student.Name
-</div>
+                <div class="card-body text-center">
+                    <img class="card-img-top" src="~/Images/noprofilephoto.png" />
 
-<div>
-    Surname: @Model.Student.Surname
-</div>
+                    <h4>Student ID : @Model.Student.Id</h4>
+                    <h4>Surname : @Model.Student.Surname</h4>
+                    <h4>Class : @Model.Student.Class</h4>
 
-<div>
-    Class: @Model.Student.Class
-</div>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Back</a>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @section Scripts{ 
     <script src="~/JS/CustomScript.js"></script>

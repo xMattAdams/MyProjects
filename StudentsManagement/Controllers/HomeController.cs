@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace StudentsManagement.Controllers
 {
+    [Route("[controller]/[action]")] //token controller is used to for the situation when we change the name of controller that we used
     public class HomeController: Controller
     {
 
@@ -17,18 +18,20 @@ namespace StudentsManagement.Controllers
             _studentRepository = studentRepository;
         }
         
-        
+        [Route("~/Home")] // the page loads even if we won't navigate to the special location
+        [Route("~/")]
         public ViewResult Index()
         {
             var model= _studentRepository.GetAllStudents();
             return View(model);
         }
 
-        public ViewResult Details()
+        [Route("{id?}")]
+        public ViewResult Details(int? id)
         {
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Student = _studentRepository.GetStudent(1),
+                Student = _studentRepository.GetStudent(id??1), //if the incoming int value is not null, use this value, if it's null, use 1 as value  
                 PageTitle = "Student Details"
             };
             
