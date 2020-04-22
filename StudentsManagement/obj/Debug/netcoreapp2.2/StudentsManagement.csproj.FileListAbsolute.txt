@@ -29,3 +29,5 @@ C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Vie
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\_ViewStart.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.csproj.CoreCompileInputs.cache
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.genruntimeconfig.cache
