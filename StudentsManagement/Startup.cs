@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StudentsManagement.Models;
@@ -25,7 +26,9 @@ namespace StudentsManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IStudentRepository, MockStudentRepository>();
+            services.AddScoped<IStudentRepository, StudentRepoMySQL>();
+
+            services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySQL(_config.GetConnectionString("StudentDB")));   //AddDbContextPool nie tworzy nowej instancji, tylko sprawdza, czy ona juz istnieje
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

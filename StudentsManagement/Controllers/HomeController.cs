@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using StudentsManagement.Models;
 using StudentsManagement.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,9 +16,12 @@ namespace StudentsManagement.Controllers
     {
 
         private readonly IStudentRepository _studentRepository;
-        public HomeController(IStudentRepository studentRepository )
+        private readonly IHostingEnvironment hostingEnvironment;
+
+        public HomeController(IStudentRepository studentRepository, IHostingEnvironment hostingEnvironment )
         {
             _studentRepository = studentRepository;
+            this.hostingEnvironment = hostingEnvironment;
         }
         
         [Route("~/Home")] // the page loads even if we won't navigate to the special location
@@ -37,7 +43,41 @@ namespace StudentsManagement.Controllers
             
             return View(homeDetailsViewModel);
         }
+        [Route("~/Home/Create")]
+       [HttpGet]   //zwraca widok formatki, gdzie tworzymy studenta
+        public ViewResult Create()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Create(StudentCreateViewModel studentModel) //dodaje studenta do listy
+        {
+            if (ModelState.IsValid)
+            {
+                string diffFileName = null;
+                if (studentModel.Picture != null)
+                {
+                   string Folder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                   diffFileName = Guid.NewGuid().ToString() + "_" + studentModel.Picture.FileName; //uploaded filenames will be unique
+                  string fileDirection= Path.Combine(Folder, diffFileName);
+                    studentModel.Picture.CopyTo(new FileStream(fileDirection, FileMode.Create));
 
+                }
+                Student newStudent = new Student
+                {
+                    Name = studentModel.Name,
+                    Email=studentModel.Email,
+                    Class=studentModel.Class,
+                    Faculty=studentModel.Faculty,
+                    PicturePath=diffFileName
+                };
+                _studentRepository.Add(newStudent);
+                return RedirectToAction("details", new { id = newStudent.Id });
+            }
+
+            return View();
+        
+        }
     }
 }
