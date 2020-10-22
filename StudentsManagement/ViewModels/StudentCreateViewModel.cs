@@ -14,7 +14,9 @@ namespace StudentsManagement.ViewModels
         [Required]
         [MaxLength(50, ErrorMessage = "Name cannot be longer than 20 characters")]
         public string Name { get; set; }
-        
+
+        [Required]
+        [MaxLength(50, ErrorMessage = "Surname cannot be longer than 40 characters")]
         public string Surname { get; set; }
         
         [Required]

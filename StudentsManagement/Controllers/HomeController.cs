@@ -55,15 +55,10 @@ namespace StudentsManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                string diffFileName = null;
-                if (studentModel.Picture != null)
-                {
-                   string Folder = Path.Combine(hostingEnvironment.WebRootPath, "images");
-                   diffFileName = Guid.NewGuid().ToString() + "_" + studentModel.Picture.FileName; //uploaded filenames will be unique
-                  string fileDirection= Path.Combine(Folder, diffFileName);
-                    studentModel.Picture.CopyTo(new FileStream(fileDirection, FileMode.Create));
-
-                }
+                string diffFileName = PhotoUpload(studentModel);
+               
+                
+                
                 Student newStudent = new Student
                 {
                     Name = studentModel.Name,
@@ -78,6 +73,79 @@ namespace StudentsManagement.Controllers
 
             return View();
         
+        }
+
+
+        [HttpGet]   
+        public ViewResult Edit(int id)
+        {
+            Student student = _studentRepository.GetStudent(id);
+            StudentEditViewModel newStudent = new StudentEditViewModel
+            {
+                Id=student.Id,
+                ActualPhotoPath=student.PicturePath,
+                Name=student.Name,
+                Surname=student.Surname,
+                Class=student.Class,
+                Email=student.Email,
+                Faculty=student.Faculty
+            };
+            return View(newStudent);
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult Edit(StudentEditViewModel studentModel) 
+        {
+            if (ModelState.IsValid)
+            {
+                Student student = _studentRepository.GetStudent(studentModel.Id);
+                student.Surname = studentModel.Surname;
+                student.Email = studentModel.Email;
+                student.Faculty = studentModel.Faculty;
+                student.Class = studentModel.Class;
+                student.Name = studentModel.Name;
+                if (studentModel.Picture != null)
+                {
+
+
+                    if (studentModel.ActualPhotoPath != null)
+                    {
+                        string fPath = Path.Combine(hostingEnvironment.WebRootPath, "Images", studentModel.ActualPhotoPath);
+                        System.IO.File.Delete(fPath);
+                    }
+
+                    student.PicturePath = PhotoUpload(studentModel);
+                }
+
+                _studentRepository.Update(student);
+                return RedirectToAction("details", new { id = student.Id });
+            }
+
+            return View();
+
+        }
+
+        private string PhotoUpload(StudentCreateViewModel studentModel)
+        {
+            string diffFileName =null;
+            if (studentModel.Picture != null)
+            {
+
+                string Folder = Path.Combine(hostingEnvironment.WebRootPath, "Images");
+                diffFileName = Guid.NewGuid().ToString() + "_" + studentModel.Picture.FileName; //uploaded filenames will be unique
+                string fileDirection = Path.Combine(Folder, diffFileName);
+                using (var newStream = new FileStream(fileDirection, FileMode.Create))
+                    
+                {
+                    studentModel.Picture.CopyTo(newStream);
+                }
+                
+
+            }
+            return diffFileName;
         }
     }
 }
