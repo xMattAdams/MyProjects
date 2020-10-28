@@ -35,9 +35,18 @@ namespace StudentsManagement.Controllers
         [Route("{id?}")]
         public ViewResult Details(int? id)
         {
+            //throw new Exception("Exception In Details View");
+
+            Student student = _studentRepository.GetStudent(id.Value);
+            if (student == null)
+            {
+                Response.StatusCode = 404;
+                return View("StudentNotFound", id.Value);
+            }
+            
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Student = _studentRepository.GetStudent(id??1), //if the incoming int value is not null, use this value, if it's null, use 1 as value  
+                Student = student,   
                 PageTitle = "Student Details"
             };
             

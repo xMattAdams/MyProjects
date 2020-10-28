@@ -33,3 +33,6 @@ C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsM
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Create.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsManagement.csproj.CoreCompileInputs.cache
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Edit.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\StudentNotFound.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\ErrorNotFound.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\ErrorView.cshtml.g.cs

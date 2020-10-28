@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +29,8 @@ namespace StudentsManagement
             services.AddMvc();
             services.AddScoped<IStudentRepository, StudentRepoMySQL>();
 
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySQL(_config.GetConnectionString("StudentDB")));   //AddDbContextPool nie tworzy nowej instancji, tylko sprawdza, czy ona juz istnieje
         }
 
@@ -38,14 +41,20 @@ namespace StudentsManagement
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("Error/{0}"); //lepsza pratyka, poniewaz w zrodle strony pokazane 
+                //jest, ze w przypadku podania zlego route'a, dla tego zlego route'a wystapil blad 404, a nie wywala Ok 200, gdy pojawi się widok z errorem, poniewaz error wystapil na serwerze
+                //dodatkowo route nie zmienia się na /Error/404, tylko pozostaje taki, jaki wpisalismy i dla niego pokazuje się Widoj z błędem
+            }
 
-            
             app.UseStaticFiles();
-            //app.UseMvcWithDefaultRoute();
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            //});
+            app.UseAuthentication();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.UseMvc();
 
