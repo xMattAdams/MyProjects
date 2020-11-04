@@ -36,3 +36,4 @@ C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Vie
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\StudentNotFound.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\ErrorNotFound.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\ErrorView.cshtml.g.cs
+C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\UserAccount\Register.cshtml.g.cs
