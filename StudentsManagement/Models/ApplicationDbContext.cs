@@ -47,7 +47,7 @@ namespace StudentsManagement.Models
             modelBuilder.Entity<IdentityRoleClaim<string>>(entity => entity.Property(m => m.Id).HasMaxLength(85));
             modelBuilder.Entity<IdentityRoleClaim<string>>(entity => entity.Property(m => m.RoleId).HasMaxLength(85));
 
-            //modelBuilder.Entity<IdentityResult>().Property(p => p.Succeeded).HasConversion<int>();
+            
            
             modelBuilder.Seed();
         }

@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StudentsManagement.Models;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 
 namespace StudentsManagement
 {
@@ -29,9 +31,12 @@ namespace StudentsManagement
             services.AddMvc();
             services.AddScoped<IStudentRepository, StudentRepoMySQL>();
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+
+              options.Password.RequireNonAlphanumeric = false)
+
                  .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySQL(_config.GetConnectionString("StudentDB")));   //AddDbContextPool nie tworzy nowej instancji, tylko sprawdza, czy ona juz istnieje
+            services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySql(_config.GetConnectionString("StudentDB")));   //AddDbContextPool nie tworzy nowej instancji, tylko sprawdza, czy ona juz istnieje
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

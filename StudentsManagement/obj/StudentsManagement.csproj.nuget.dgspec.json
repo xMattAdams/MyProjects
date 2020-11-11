@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[2.2.4, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[2.2.4, )"
@@ -70,9 +74,9 @@
               "target": "Package",
               "version": "[2.2.4, )"
             },
-            "MySql.Data.EntityFrameworkCore": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[8.0.19, )"
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

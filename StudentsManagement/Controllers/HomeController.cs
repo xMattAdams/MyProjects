@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using StudentsManagement.Models;
@@ -52,14 +53,17 @@ namespace StudentsManagement.Controllers
             
             return View(homeDetailsViewModel);
         }
-        [Route("~/Home/Create")]
-       [HttpGet]   //zwraca widok formatki, gdzie tworzymy studenta
+        
+        //[Route("~/Home/Create")]
+        [HttpGet]   //zwraca widok formatki, gdzie tworzymy studenta
+        [Authorize]
         public ViewResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult Create(StudentCreateViewModel studentModel) //dodaje studenta do listy
         {
             if (ModelState.IsValid)
@@ -86,6 +90,7 @@ namespace StudentsManagement.Controllers
 
 
         [HttpGet]   
+        [Authorize]
         public ViewResult Edit(int id)
         {
             Student student = _studentRepository.GetStudent(id);
@@ -106,6 +111,7 @@ namespace StudentsManagement.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public IActionResult Edit(StudentEditViewModel studentModel) 
         {
             if (ModelState.IsValid)
