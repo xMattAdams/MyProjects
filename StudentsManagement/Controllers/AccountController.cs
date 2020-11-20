@@ -28,7 +28,7 @@ namespace StudentsManagement.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>Login(LoginViewModel loginModel)
+        public async Task<IActionResult>Login(LoginViewModel loginModel, string returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -37,8 +37,17 @@ namespace StudentsManagement.Controllers
 
                 if (response.Succeeded)
                 {
-                   
-                    return RedirectToAction("index", "home");
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl)) //localredirect przekierowuje tylko do lokalnych linkow z aplikacji, co zapobiega atakom hakerow, chcacych wykrasc nasze dane logowania poprzez przekierowanie do swoich stron poprze zmiane returnurla
+                    {
+                        return Redirect(returnUrl); 
+                    }
+
+                    else
+                    {
+                        return RedirectToAction("index", "home");
+                    }
+
+                    
                 }
                
                 {
