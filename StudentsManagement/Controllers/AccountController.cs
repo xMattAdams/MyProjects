@@ -5,17 +5,18 @@ using System.Net.Security;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using StudentsManagement.Models;
 using StudentsManagement.ViewModels;
 
 namespace StudentsManagement.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
 
 
-        public AccountController(UserManager<IdentityUser>userManager, SignInManager<IdentityUser>signInManager)
+        public AccountController(UserManager<ApplicationUser>userManager, SignInManager<ApplicationUser>signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -32,7 +33,7 @@ namespace StudentsManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                var loggUser = new IdentityUser { UserName = loginModel.Email, PasswordHash = loginModel.Password };
+                var loggUser = new ApplicationUser { UserName = loginModel.Email, PasswordHash = loginModel.Password };
                 var response = await signInManager.PasswordSignInAsync(loginModel.Email, loginModel.Password, loginModel.RememberUser, false);
 
                 if (response.Succeeded)
@@ -79,7 +80,7 @@ namespace StudentsManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                var newUser = new IdentityUser { UserName = registerModel.Email, Email = registerModel.Email };
+                var newUser = new ApplicationUser { UserName = registerModel.Email, Email = registerModel.Email, Province=registerModel.Province, City=registerModel.City };
                 var response = await userManager.CreateAsync(newUser, registerModel.Password);
 
                 if (response.Succeeded)
@@ -95,6 +96,28 @@ namespace StudentsManagement.Controllers
             
             return View(registerModel);
         }
+
+
+
+
+        [HttpPost][HttpGet]
+        public async Task<IActionResult> EmailUniqueCheck(string email)
+        {
+            var userEmail = await userManager.FindByEmailAsync(email);
+
+            if (userEmail == null)
+            {
+                return Json(true);
+        
+            }
+
+            else
+            {
+                return Json($"This email address is currently in use. Choose different email address!");
+            }
+        }
+
+
 
 
     }

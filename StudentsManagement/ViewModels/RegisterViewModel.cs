@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace StudentsManagement.ViewModels
 
         [Required]
         [EmailAddress]
+        [Remote(action:"EmailUniqueCheck", controller:"Account")]
         public string Email { get; set; }
 
         [Required]
@@ -23,5 +25,7 @@ namespace StudentsManagement.ViewModels
         [Display(Name ="Confirm your password")]
         [Compare("Password", ErrorMessage ="The confirmed password does not match the actual password")]
         public string PasswordConfirm { get; set; }
+        public string City { get; set; }
+        public string Province { get; set; }
     }
 }

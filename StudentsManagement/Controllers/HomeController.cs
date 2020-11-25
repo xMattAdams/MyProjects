@@ -143,6 +143,9 @@ namespace StudentsManagement.Controllers
 
         }
 
+
+      
+
         private string PhotoUpload(StudentCreateViewModel studentModel)
         {
             string diffFileName =null;

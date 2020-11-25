@@ -31,7 +31,7 @@ namespace StudentsManagement
             services.AddMvc();
             services.AddScoped<IStudentRepository, StudentRepoMySQL>();
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 
               options.Password.RequireNonAlphanumeric = false)
 
