@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q03C9u4K54oySOrOrhA71i5+SYjo2WQJixnGWU9gbX6SXLOw1woPFfkLjOikIRqmzrNux4JQ3cMD0hhf6D/fpQ==",
+  "dgSpecHash": "ix1ZWumNZWCDR9Q6RPybyTJD6edABDldd5tumAXZ+pRfbpnFr8xaAAAlLLgf+zNdW9F4yrfYHlhbIc2ylaNZgg==",
   "success": true,
   "projectFilePath": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\matix\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.0\\microsoft.aspnet.identity.core.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
@@ -309,5 +310,16 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „Microsoft.AspNet.Identity.Core 2.2.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8” zamiast platformy docelowej projektu „.NETCoreApp,Version=v2.2”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

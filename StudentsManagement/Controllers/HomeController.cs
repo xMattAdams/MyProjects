@@ -143,8 +143,51 @@ namespace StudentsManagement.Controllers
 
         }
 
+        [Authorize]
+        [Route("{id}")]
+        [HttpGet]
+        public ViewResult Delete(int Id)
+        {
+            var student = _studentRepository.GetStudent(Id);
+            if (student == null)
+            {
+                Response.StatusCode = 404;
+                return View("StudentNotFound", Id);
+            }
 
-      
+            HomeDeleteViewModel homeDeleteViewModel = new HomeDeleteViewModel()
+            {
+                Id=student.Id,
+                Class=student.Class,
+                Email=student.Email,
+                Faculty=student.Faculty,
+                Name=student.Name,
+                Surname=student.Surname,
+                CurrentPhotoPath=student.PicturePath
+                
+            };
+            return View(homeDeleteViewModel);
+        }
+
+        [Authorize]
+        [Route("{id}")]
+        [HttpPost]
+        public IActionResult Delete(int? id)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                Student student = _studentRepository.GetStudent(id.Value);
+           
+
+                _studentRepository.Delete(student.Id);
+               
+            }
+
+            return RedirectToAction("index", "home");
+        }
+
+
 
         private string PhotoUpload(StudentCreateViewModel studentModel)
         {
@@ -165,5 +208,12 @@ namespace StudentsManagement.Controllers
             }
             return diffFileName;
         }
+
+
+
+
+
+
+        
     }
 }

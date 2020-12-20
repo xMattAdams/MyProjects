@@ -23,9 +23,9 @@ namespace StudentsManagement.Models
             return student;
         }
 
-        public Student Delete(int Id)
+        public Student Delete(int id)
         {
-            Student student = context.Students.Find(Id);
+            Student student = context.Students.Find(id);
             if (student != null)
             {
                 context.Students.Remove(student);

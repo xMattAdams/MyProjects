@@ -28,15 +28,17 @@ namespace StudentsManagement.Models
             return student;
         }
 
-        public Student Delete(int Id)
+        public Student Delete(int id)
         {
-            Student student =_studentList.FirstOrDefault(s => s.Id == Id);
+            Student student =_studentList.FirstOrDefault(s => s.Id == id);
             if (student != null)
             {
                 _studentList.Remove(student);
             }
             return student;
         }
+
+        
 
         public IEnumerable<Student> GetAllStudents()
         {

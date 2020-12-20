@@ -24,7 +24,9 @@
     ".NETCoreApp,Version=v2.2": {
       "StudentsManagement/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.Identity.Core": "2.2.0",
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.EntityFrameworkCore.Design": "2.2.0",
@@ -38,6 +40,17 @@
         },
         "compile": {
           "StudentsManagement.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.0": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.40217.0"
+          }
+        },
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -3609,6 +3622,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TeLlgtqJhJxO/PdjVo3lrAqwIqVUvKTaR5nXb9Zt5c9pRFSO/tgFb4IV8miP9zQe0QfzQvnLz5KSZ5EMMfygaQ==",
+      "path": "microsoft.aspnet.identity.core/2.2.0",
+      "hashPath": "microsoft.aspnet.identity.core.2.2.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
