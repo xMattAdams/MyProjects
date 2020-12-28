@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Update;
+using StudentsManagement.Models;
 using StudentsManagement.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -15,10 +17,12 @@ namespace StudentsManagement.Controllers
 
     {
         private readonly RoleManager<IdentityRole> roleManager;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public AdminController(RoleManager<IdentityRole> roleManager)
+        public AdminController(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
         {
             this.roleManager = roleManager;
+            this.userManager = userManager;
         }
 
         [Authorize][HttpGet]
@@ -61,6 +65,64 @@ namespace StudentsManagement.Controllers
         {
             var roles = roleManager.Roles;
             return View(roles);
+        }
+
+   [HttpGet]
+    public async Task<IActionResult>EditRole(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+
+            if (role == null)
+            {
+                ViewBag.ErrorMessage = $"Couldn't find the role with Id = {id}";
+                return View("ErrorNotFound");
+            }
+
+            var model = new EditRoleViewModel
+            {
+                RoleId = role.Id,
+                RoleName = role.Name
+            };
+       
+        
+        foreach(var user in userManager.Users)
+            {
+              if (await userManager.IsInRoleAsync(user, role.Name))
+                {
+                    model.Users.Add(user.UserName);
+                }
+            }
+            return View(model);
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> EditRole(EditRoleViewModel model)
+        {
+            var role = await roleManager.FindByIdAsync(model.RoleId);
+
+            if (role == null)
+            {
+                ViewBag.ErrorMessage = $"Couldn't find the role with Id = {model.RoleId}";
+                return View("ErrorNotFound");
+            }
+            else
+            {
+                role.Name = model.RoleName;
+              var updateResult = await roleManager.UpdateAsync(role);
+
+                if (updateResult.Succeeded)
+                {
+                    return RedirectToAction("GetRoles");
+                }
+                 foreach(var error in updateResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(model);
+            }
+            
         }
 
     }
