@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\ClassController.cs" />
+    <Compile Remove="Controllers\UserAccountController.cs" />
     <Compile Remove="Migrations\20201125011945_Extended the IdentityUser.cs" />
     <Compile Remove="Migrations\20201125011945_Extended the IdentityUser.Designer.cs" />
   </ItemGroup>

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace StudentsManagement.Controllers
 {
+    
     [Route("[controller]/[action]")] //token controller is used to for the situation when we change the name of controller that we used
     public class HomeController: Controller
     {
@@ -56,14 +57,14 @@ namespace StudentsManagement.Controllers
         
         //[Route("~/Home/Create")]
         [HttpGet]   //zwraca widok formatki, gdzie tworzymy studenta
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public ViewResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create(StudentCreateViewModel studentModel) //dodaje studenta do listy
         {
             if (ModelState.IsValid)
@@ -89,8 +90,8 @@ namespace StudentsManagement.Controllers
         }
 
 
-        [HttpGet]   
-        [Authorize]
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ViewResult Edit(int id)
         {
             Student student = _studentRepository.GetStudent(id);
@@ -111,7 +112,7 @@ namespace StudentsManagement.Controllers
 
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(StudentEditViewModel studentModel) 
         {
             if (ModelState.IsValid)
@@ -143,7 +144,7 @@ namespace StudentsManagement.Controllers
 
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [Route("{id}")]
         [HttpGet]
         public ViewResult Delete(int Id)
@@ -169,7 +170,7 @@ namespace StudentsManagement.Controllers
             return View(homeDeleteViewModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [Route("{id}")]
         [HttpPost]
         public IActionResult Delete(int? id)
