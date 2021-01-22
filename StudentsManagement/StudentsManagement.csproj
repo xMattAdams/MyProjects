@@ -6,8 +6,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\UserAccount\**" />
+    <Content Remove="Views\UserAccount\**" />
+    <EmbeddedResource Remove="Views\UserAccount\**" />
+    <None Remove="Views\UserAccount\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ClassController.cs" />
+    <Compile Remove="Controllers\UserAccountController.cs" />
     <Compile Remove="Migrations\20201125011945_Extended the IdentityUser.cs" />
     <Compile Remove="Migrations\20201125011945_Extended the IdentityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\default.html" />
+    <Content Remove="wwwroot\foo.html" />
   </ItemGroup>
 
   <ItemGroup>

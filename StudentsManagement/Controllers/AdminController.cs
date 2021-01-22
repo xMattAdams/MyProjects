@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace StudentsManagement.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdminController:Controller
 
     {
@@ -32,7 +33,7 @@ namespace StudentsManagement.Controllers
             return View();
         }
 
-        [Authorize]
+        
         [HttpPost]
         public async Task <IActionResult> CreateRole(CreateRoleViewModel model)
         {

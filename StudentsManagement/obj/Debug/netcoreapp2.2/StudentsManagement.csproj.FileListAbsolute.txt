@@ -41,6 +41,5 @@ C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\StudentsM
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Admin\CreateRole.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Admin\GetRoles.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Delete.cshtml.g.cs
-C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\UserAccount\Register.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Admin\EditRole.cshtml.g.cs
 C:\Users\matix\source\repos\StudentsManagement\obj\Debug\netcoreapp2.2\Razor\Views\Admin\RoleUsersModify.cshtml.g.cs

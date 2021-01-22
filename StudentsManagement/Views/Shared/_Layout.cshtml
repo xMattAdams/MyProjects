@@ -44,15 +44,24 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class=" navbar-nav">
-                    <li class="nav-item">
-                        <a asp-action="create" asp-controller="home" class="nav-link">CREATE ACCOUNT</a>
-                    </li>
+                    @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a asp-action="create" asp-controller="home" class="nav-link">CREATE ACCOUNT</a>
+                        </li>
+                    }
                     <li class="nav-item">
 
                         <a asp-action="index" asp-controller="home" class="nav-link">LIST OF STUDENTS</a>
                     </li>
 
-                    
+                    @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a asp-action="GetRoles" asp-controller="Admin" class="nav-link">ROLES</a>
+                        </li>
+                    }
+
                 </ul>
                 <ul class=" navbar-nav ml-auto">
                     @if (signInManager.IsSignedIn(User))

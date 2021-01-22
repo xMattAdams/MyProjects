@@ -12,7 +12,7 @@ namespace StudentsManagement.Models
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(50, ErrorMessage ="Name cannot be longer than 20 characters")]
+        [MaxLength(20, ErrorMessage ="Name cannot be longer than 20 characters")]
         public string Name { get; set; }
         public string Surname { get; set; }
         [Required]
