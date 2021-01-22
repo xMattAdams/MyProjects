@@ -13,7 +13,11 @@ using System.Threading.Tasks;
 namespace StudentsManagement.Controllers
 {
     
+<<<<<<< Updated upstream
     [Route("[controller]/[action]")] //token controller is used to for the situation when we change the name of controller that we used
+=======
+    [Route("[controller]/[action]")] //token controller is used for the situation when we change the name of controller that was used
+>>>>>>> Stashed changes
     public class HomeController: Controller
     {
 
@@ -37,7 +41,7 @@ namespace StudentsManagement.Controllers
         [Route("{id?}")]
         public ViewResult Details(int? id)
         {
-            //throw new Exception("Exception In Details View");
+            
 
             Student student = _studentRepository.GetStudent(id.Value);
             if (student == null)
@@ -55,8 +59,13 @@ namespace StudentsManagement.Controllers
             return View(homeDetailsViewModel);
         }
         
+<<<<<<< Updated upstream
         //[Route("~/Home/Create")]
         [HttpGet]   //zwraca widok formatki, gdzie tworzymy studenta
+=======
+        
+        [HttpGet]   //returns the view of creating the student
+>>>>>>> Stashed changes
         [Authorize(Roles ="Admin")]
         public ViewResult Create()
         {
@@ -65,7 +74,11 @@ namespace StudentsManagement.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
+<<<<<<< Updated upstream
         public IActionResult Create(StudentCreateViewModel studentModel) //dodaje studenta do listy
+=======
+        public IActionResult Create(StudentCreateViewModel studentModel) //adds a student to the list
+>>>>>>> Stashed changes
         {
             if (ModelState.IsValid)
             {
@@ -76,6 +89,7 @@ namespace StudentsManagement.Controllers
                 Student newStudent = new Student
                 {
                     Name = studentModel.Name,
+                    Surname=studentModel.Surname,
                     Email=studentModel.Email,
                     Class=studentModel.Class,
                     Faculty=studentModel.Faculty,
@@ -197,7 +211,7 @@ namespace StudentsManagement.Controllers
             {
 
                 string Folder = Path.Combine(hostingEnvironment.WebRootPath, "Images");
-                diffFileName = Guid.NewGuid().ToString() + "_" + studentModel.Picture.FileName; //uploaded filenames will be unique
+                diffFileName = Guid.NewGuid().ToString() + "_" + studentModel.Picture.FileName; 
                 string fileDirection = Path.Combine(Folder, diffFileName);
                 using (var newStream = new FileStream(fileDirection, FileMode.Create))
                     

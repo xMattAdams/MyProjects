@@ -33,7 +33,7 @@ namespace StudentsManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                var loggUser = new ApplicationUser { UserName = loginModel.Email, PasswordHash = loginModel.Password };
+                
                 var response = await signInManager.PasswordSignInAsync(loginModel.Email, loginModel.Password, loginModel.RememberUser, false);
 
                 if (response.Succeeded)
