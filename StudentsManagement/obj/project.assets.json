@@ -13060,11 +13060,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj",
+      "projectUniqueName": "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\StudentsManagement.csproj",
       "projectName": "StudentsManagement",
-      "projectPath": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj",
+      "projectPath": "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\StudentsManagement.csproj",
       "packagesPath": "C:\\Users\\matix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\obj\\",
+      "outputPath": "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13159,7 +13159,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Pakiet „Microsoft.AspNet.Identity.Core 2.2.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8” zamiast platformy docelowej projektu „.NETCoreApp,Version=v2.2”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.Identity.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"

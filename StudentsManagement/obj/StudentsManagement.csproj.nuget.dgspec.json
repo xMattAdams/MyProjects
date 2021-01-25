@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj": {}
+    "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\StudentsManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj": {
+    "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\StudentsManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj",
+        "projectUniqueName": "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\StudentsManagement.csproj",
         "projectName": "StudentsManagement",
-        "projectPath": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\StudentsManagement.csproj",
+        "projectPath": "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\StudentsManagement.csproj",
         "packagesPath": "C:\\Users\\matix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matix\\source\\repos\\StudentsManagement\\obj\\",
+        "outputPath": "C:\\Users\\matix\\Documents\\GitHub\\MyProjects\\StudentsManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
