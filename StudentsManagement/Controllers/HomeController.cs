@@ -34,6 +34,7 @@ namespace StudentsManagement.Controllers
             return View(model);
         }
 
+        [Authorize]
         [Route("{id?}")]
         public ViewResult Details(int? id)
         {
