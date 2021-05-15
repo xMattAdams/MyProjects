@@ -1,0 +1,18 @@
+C:\Users\matix\source\repos\Snake Game\bin\Debug\Snake Game.exe.config
+C:\Users\matix\source\repos\Snake Game\bin\Debug\Snake Game.exe
+C:\Users\matix\source\repos\Snake Game\bin\Debug\Snake Game.pdb
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.csprojAssemblyReference.cache
+C:\Users\matix\source\repos\Snake Game\obj\Debug\MainWindow.g.cs
+C:\Users\matix\source\repos\Snake Game\obj\Debug\App.g.cs
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game_MarkupCompile.cache
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game_MarkupCompile.lref
+C:\Users\matix\source\repos\Snake Game\obj\Debug\MainWindow.baml
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.g.resources
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake_Game.Properties.Resources.resources
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.csproj.GenerateResource.cache
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.csproj.CoreCompileInputs.cache
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.exe
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.pdb
+C:\Users\matix\source\repos\Snake Game\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\matix\source\repos\Snake Game\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\matix\source\repos\Snake Game\obj\Debug\Snake Game.csproj.CopyComplete
