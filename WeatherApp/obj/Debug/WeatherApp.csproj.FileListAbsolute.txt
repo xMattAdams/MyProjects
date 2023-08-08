@@ -1,0 +1,14 @@
+C:\Users\matad\source\repos\WeatherApp\bin\Debug\WeatherApp.exe.config
+C:\Users\matad\source\repos\WeatherApp\bin\Debug\WeatherApp.exe
+C:\Users\matad\source\repos\WeatherApp\bin\Debug\WeatherApp.pdb
+C:\Users\matad\source\repos\WeatherApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\matad\source\repos\WeatherApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.csproj.AssemblyReference.cache
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.Form1.resources
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.Properties.Resources.resources
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.csproj.GenerateResource.cache
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileInputs.cache
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.csproj.CopyComplete
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.exe
+C:\Users\matad\source\repos\WeatherApp\obj\Debug\WeatherApp.pdb
