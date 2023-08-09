@@ -37,7 +37,9 @@
             this.getDataButton = new System.Windows.Forms.Button();
             this.validationLabel = new System.Windows.Forms.Label();
             this.avgListBox = new System.Windows.Forms.ListBox();
-            this.avgButton = new System.Windows.Forms.Button();
+            this.saveToFileButton = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.avgTempLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // longTextBox
@@ -92,7 +94,7 @@
             // 
             // getDataButton
             // 
-            this.getDataButton.Location = new System.Drawing.Point(84, 234);
+            this.getDataButton.Location = new System.Drawing.Point(84, 280);
             this.getDataButton.Name = "getDataButton";
             this.getDataButton.Size = new System.Drawing.Size(136, 51);
             this.getDataButton.TabIndex = 8;
@@ -119,23 +121,33 @@
             this.avgListBox.Size = new System.Drawing.Size(185, 212);
             this.avgListBox.TabIndex = 10;
             // 
-            // avgButton
+            // saveToFileButton
             // 
-            this.avgButton.Enabled = false;
-            this.avgButton.Location = new System.Drawing.Point(89, 446);
-            this.avgButton.Name = "avgButton";
-            this.avgButton.Size = new System.Drawing.Size(136, 51);
-            this.avgButton.TabIndex = 11;
-            this.avgButton.Text = "Calculate Average Temperature";
-            this.avgButton.UseVisualStyleBackColor = true;
-            this.avgButton.Click += new System.EventHandler(this.avgButton_Click);
+            this.saveToFileButton.Enabled = false;
+            this.saveToFileButton.Location = new System.Drawing.Point(84, 460);
+            this.saveToFileButton.Name = "saveToFileButton";
+            this.saveToFileButton.Size = new System.Drawing.Size(136, 51);
+            this.saveToFileButton.TabIndex = 12;
+            this.saveToFileButton.Text = "Save Results";
+            this.saveToFileButton.UseVisualStyleBackColor = true;
+            this.saveToFileButton.Click += new System.EventHandler(this.saveToFileButton_Click);
+            // 
+            // avgTempLabel
+            // 
+            this.avgTempLabel.AutoSize = true;
+            this.avgTempLabel.Location = new System.Drawing.Point(397, 354);
+            this.avgTempLabel.Name = "avgTempLabel";
+            this.avgTempLabel.Size = new System.Drawing.Size(187, 16);
+            this.avgTempLabel.TabIndex = 13;
+            this.avgTempLabel.Text = "Day and average temperature";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 626);
-            this.Controls.Add(this.avgButton);
+            this.Controls.Add(this.avgTempLabel);
+            this.Controls.Add(this.saveToFileButton);
             this.Controls.Add(this.avgListBox);
             this.Controls.Add(this.validationLabel);
             this.Controls.Add(this.getDataButton);
@@ -163,7 +175,9 @@
         private System.Windows.Forms.Button getDataButton;
         private System.Windows.Forms.Label validationLabel;
         private System.Windows.Forms.ListBox avgListBox;
-        private System.Windows.Forms.Button avgButton;
+        private System.Windows.Forms.Button saveToFileButton;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label avgTempLabel;
     }
 }
 
