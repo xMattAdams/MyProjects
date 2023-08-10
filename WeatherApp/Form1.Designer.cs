@@ -40,6 +40,7 @@
             this.saveToFileButton = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.avgTempLabel = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // longTextBox
@@ -141,11 +142,22 @@
             this.avgTempLabel.TabIndex = 13;
             this.avgTempLabel.Text = "Day and average temperature";
             // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(846, 563);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(136, 51);
+            this.exitButton.TabIndex = 14;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 626);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.avgTempLabel);
             this.Controls.Add(this.saveToFileButton);
             this.Controls.Add(this.avgListBox);
@@ -178,6 +190,7 @@
         private System.Windows.Forms.Button saveToFileButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label avgTempLabel;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

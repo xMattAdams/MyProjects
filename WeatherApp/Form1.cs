@@ -137,5 +137,13 @@ namespace WeatherApp
                    
             }
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            if (Application.MessageLoop)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
